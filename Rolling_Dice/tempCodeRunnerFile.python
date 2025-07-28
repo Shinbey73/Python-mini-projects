@@ -1,0 +1,24 @@
+import random
+
+def rolling_dice():
+    return random.randint(1,6)
+
+def main():
+    print('===============WELCOME TO THE DICE ROLLING SIMULATOR!================')
+    
+    print('Do you want to roll the dice?')
+
+    user_input = input('Enter "yes" or "no": ')
+
+    if user_input == 'yes':
+        print('Rolling the dice...')
+        print('The dice shows: ', rolling_dice())
+      
+    elif user_input == 'no':
+        print('Goodbye!')
+
+
+
+if __name__ == '__main__':
+    main()
+
