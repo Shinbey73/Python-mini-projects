@@ -1,0 +1,18 @@
+import time
+from colorama import init, Fore, Style
+
+init(autoreset=True)
+
+def countdown(seconds):
+    while seconds:
+        # Choose color based on time remaining (example: red if less than 10 seconds)
+        if seconds < 10:
+            color = Fore.RED
+        else:
+            color = Fore.GREEN
+        print(color + f"Time Remaining: {seconds} seconds", end="\r")
+        time.sleep(1)
+        seconds -= 1
+    print(Style.BRIGHT + "Time's up!            ")
+
+countdown(15)
